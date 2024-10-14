@@ -1,4 +1,12 @@
-﻿NAME
+﻿# Installation
+
+Extract binaries from a release into a local directory. Then, use it
+
+`addprefix --help` 
+
+# Documentation
+
+NAME
 
         addprefix - add prefix to media file based on date taken metadata or 
         file creation date
