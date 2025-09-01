@@ -133,34 +133,6 @@ namespace AddPrefix
         }
     }
 
-    public class DownloadLoadFromWeb
-    {
-        public static void Process()
-        {
-            using (var client = new WebClient())
-            {
-                var counter = 1;
-                try
-                {
-                    while (true)
-                    {
-                                                 //http://foto.aerobic.cz/6648/img00285.jpg
-                        var url = string.Format("http://foto.aerobic.cz/6648/img00{0,3:000}.jpg", counter);
-                        //var url = string.Format("http://foto.aerobic.cz/5794/img00{0,3:000}.jpg", counter);
-                        var filename = url.Split('/').Last();
-                        Console.WriteLine("Download file : {0}...", filename);
-                        client.DownloadFile(url, @"d:\workspace\tt\" + filename);
-                        counter++;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }
-            }
-        }
-    }
-
     public static class ConsoleParametersExtensions
     {
         public static bool HasParameter(this string[] args, string key, string shortKey)
